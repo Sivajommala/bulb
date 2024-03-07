@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulb ON/0FF</title>
+  <style>
+body{
+    background-color: black;
+}
+
+    #a{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+      padding-top: 30px;
+    }
+    #b1{
+      border: 2px black solid;
+      padding: 20px 40px;
+      background-color: rgb(22, 157, 40);
+      color: white;
+    }
+    #b2{
+      border: 2px black solid;
+      padding: 20px 40px;
+      background-color: red;
+
+      color: white;
+    }
+  </style>
+</head>
+<body>
+   <center>
+       <img id="bulb" src="https://youthsforum.com/wp-content/uploads/2021/02/off.png" alt="" width="700px" height="580px">
+      <div id="a">
+        <button id="b1" type="button" onclick="light(1)">on</button>
+        <button id="b2" type="button" onclick="light(0)">off</button>
+      </div>
+        
+      </center>
+
+      <script>
+        function light(show)
+        {
+            var pic;
+            if(show == 0)
+            {
+                pic = "https://youthsforum.com/wp-content/uploads/2021/02/off.png";
+            }
+            else
+            {
+                pic = "https://youthsforum.com/wp-content/uploads/2021/02/on.png"
+            }
+            document.getElementById('bulb').src = pic;
+        }
+      </script>
+
+</body>
+</html>
